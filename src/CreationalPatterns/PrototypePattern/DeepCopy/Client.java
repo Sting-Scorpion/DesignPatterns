@@ -14,14 +14,14 @@ public class Client {
         p1.setNc(nc);
 
         // 创建对象输出流
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./tmp.txt"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("./src/CreationalPatterns/PrototypePattern/DeepCopy/tmp.txt"));
         // 写对象
         oos.writeObject(p1);
         // 释放资源
         oos.close();
 
         // 创建对象输入流
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("./tmp.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("./src/CreationalPatterns/PrototypePattern/DeepCopy/tmp.txt"));
         // 读对象
         Prototype p2 = (Prototype) ois.readObject();
         // 释放资源
